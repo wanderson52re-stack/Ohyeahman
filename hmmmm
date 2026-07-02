@@ -1,0 +1,76 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Totally Normal Website</title>
+
+<style>
+body{
+    margin:0;
+    background:black;
+    color:lime;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+    text-align:center;
+}
+
+#message{
+    font-size:40px;
+    animation: flash 0.2s infinite;
+}
+
+@keyframes flash{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="message">
+    SYSTEM ERROR<br>
+    Browser has encountered TOO MUCH AWESOME
+</div>
+
+<script>
+setTimeout(() => {
+    alert("Warning: Your potato PC has been detected.");
+}, 1000);
+
+setTimeout(() => {
+    alert("Attempting to download more RAM...");
+}, 2500);
+
+setTimeout(() => {
+    document.body.requestFullscreen();
+}, 4000);
+
+let titles = [
+    "uh oh...",
+    "definitely not hacked",
+    "loading memes...",
+    "critical silliness detected"
+];
+
+let i = 0;
+
+setInterval(() => {
+    document.title = titles[i % titles.length];
+    i++;
+}, 500);
+
+setInterval(() => {
+    console.log("PRANK MODE ACTIVATED");
+}, 100);
+</script>
+
+</body>
+</html>
+```
